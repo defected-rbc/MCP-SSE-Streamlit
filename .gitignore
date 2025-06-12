@@ -1,0 +1,24 @@
+# Virtual environment
+.venv/
+venv/
+env/
+__pycache__/
+
+# Python interpreter
+*.pyc
+*.pyd
+*.pyo
+
+# IDE-specific files (if applicable)
+.idea/  # For PyCharm
+.vscode/ # For VS Code (if you don't want settings shared)
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment variables (CRUCIAL for security)
+.env
+
+# Streamlit specific (if applicable)
+.streamlit/
