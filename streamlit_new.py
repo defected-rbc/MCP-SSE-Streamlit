@@ -20,9 +20,9 @@ async def call_tool(server_sse_url: str, article_url: str) -> str:
     calls the summarize_wikipedia_article tool, and returns only the summary text.
     """
     try:
-        # sse_client now requires a way to send messages back, typically via a POST endpoint.
-        # It expects a tuple of (sse_read_url, post_write_url).
-        async with sse_client(read_url=server_sse_url, write_url=MCP_SERVER_MESSAGES_URL, headers={}) as streams:
+        # Corrected sse_client usage: It typically expects the base URL as the first argument.
+        # The ClientSession then handles the read/write streams internally using this base URL.
+        async with sse_client(server_sse_url) as streams:
             reader, writer = streams # Unpack the reader and writer streams
             async with ClientSession(reader, writer) as session:
                 await session.initialize()
