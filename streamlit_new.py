@@ -69,13 +69,7 @@ def main():
     st.title("📚 Wikipedia Article Summarizer (MCP Client)")
     st.write("This Streamlit app connects to your deployed MCP server to summarize Wikipedia articles.")
 
-    st.markdown("---")
-    st.subheader("Server Configuration")
-    # Display the fixed server URL
-    st.code(f"MCP Server Base URL: {CLOUD_RUN_BASE_URL}", language="text")
-    st.code(f"SSE Endpoint: {MCP_SERVER_SSE_URL}", language="text")
-    st.code(f"Messages Endpoint: {MCP_SERVER_MESSAGES_URL}", language="text")
-    st.markdown("---")
+    # --- Removed Server Configuration Display ---
 
     st.subheader("Article Input")
     article_url = st.text_input(
