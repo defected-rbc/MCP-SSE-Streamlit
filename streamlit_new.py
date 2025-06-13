@@ -7,7 +7,7 @@ import httpx # Required for sse_client for async HTTP requests
 
 # --- Configuration ---
 # Your deployed Cloud Run server URL (base URL for the service)
-# Make sure this matches the URL you got from Cloud Run.
+# This has been updated with the URL you provided.
 CLOUD_RUN_BASE_URL = "https://ollama-gemini-server-974800203413.us-central1.run.app"
 # The SSE endpoint on your server
 MCP_SERVER_SSE_URL = f"{CLOUD_RUN_BASE_URL}/sse"
